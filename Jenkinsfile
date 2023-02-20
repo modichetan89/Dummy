@@ -2,11 +2,11 @@ pipeline {
     agent any
  
     stages {
-        stage('Test') {
+       stage('Example Build') {
             steps {
-                bat "mvn -D clean test"
+                sh 'mvn -B clean verify'
             }
-    }
+        }
         stage('Example') {
             steps {
                 echo 'Hello World'
