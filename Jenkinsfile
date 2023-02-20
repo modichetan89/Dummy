@@ -7,10 +7,10 @@ pipeline {
                 bat "mvn -D clean test"
             }
     }
-        stage('Deploy') {
+        stage('Example') {
             steps {
-                bat "mvn -D clean test"
+                echo 'Hello World'
             }
-    }
+        }
 }      
 }
