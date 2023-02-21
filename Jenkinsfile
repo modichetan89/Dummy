@@ -4,8 +4,9 @@ pipeline {
     stages {
        stage('Build') {
             steps {
+                echo 'Build Start'
                 sh 'mvn -B clean verify'
-                echo 'Done'
+                echo 'Build Completed'
             }
         }
 }      
