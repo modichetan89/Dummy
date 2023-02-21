@@ -4,13 +4,15 @@ pipeline {
     stages {
        stage('Build') {
             steps {
+                echo "Build started"
                 sh 'mvn -B clean verify'
                 echo "Build Done"
             }
         }
-        stage('Example') {
+        stage('Publish Junit Results') {
             steps {
-                echo 'Hello World'
+                echo 'Publishing junit results'
+                junit skipMarkingBuildUnstable: true, testResults: 'xmlReport/output.xml'
             }
         }
 }      
