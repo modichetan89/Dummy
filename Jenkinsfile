@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Build Start'
                 bat "mvn -D clean test"
-                echo 'Completed'
+                echo 'Build Completed'
             }
         }
     }   
